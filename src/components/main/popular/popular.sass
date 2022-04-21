@@ -1,0 +1,32 @@
+.popular
+    h2
+        text-align: center
+        font-weight: 400
+        font-size: 18px
+        line-height: 22px
+    .wrapper
+        flex-wrap: wrap
+        display: flex
+        margin-top: 30px
+        .item
+            max-width: 20%
+            display: inline-block
+            overflow: hidden
+            img
+                display: block
+                transition: 1s
+                width: 100%
+                object-fit: cover
+                &:hover
+                    transform: scale(1.1)
+
+@media  (max-width: 757px)
+    .popular
+        .wrapper
+            .item
+                max-width: 33.33%
+@media  (max-width: 530px)
+    .popular
+        .wrapper
+            .item
+                max-width: 50%       

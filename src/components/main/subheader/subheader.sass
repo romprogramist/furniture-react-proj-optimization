@@ -1,0 +1,26 @@
+.subheader
+  display: none   
+
+@media  (max-width: 757px)
+	.subheader
+			background: #363636
+			padding: 10px 40px
+			display: block
+			& > div
+					width: 80px
+					display: flex
+					justify-content: space-between
+					position: relative
+					&::before          
+							content: ''
+							background: #fff
+							position: absolute
+							width: 1px
+							height: 90%
+							top: 50%                                
+							right: -20px
+							transform: translateY(-50%)
+					img
+							width: 30px
+							height: 30px
+							cursor: pointer
