@@ -3,11 +3,11 @@ import './new-arrivals.sass';
 
 const NewArrivals = () => {
     return (
-        <section class="new-arrivals">
+        <section className="new-arrivals">
             <h1>
                 НОВЫЕ ПОСТУПЛЕНИЯ
             </h1>
-            <div class="wrapper">
+            <div className="wrapper">
                 <div className="card">
                     <div className="classImg">
                         <img src="https://i.pinimg.com/736x/98/9c/15/989c1559e6d9e686fe0fb646a38fc4f7.jpg" alt="" title=""></img>

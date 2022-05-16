@@ -1,6 +1,6 @@
 
 import { useDispatch } from 'react-redux';
-import { toggle } from '../../modals/basket/basketSlice';
+import { toggle } from '../../modals/basket/BasketSlice';
 import { showModal } from '../../modals/modal-window/modalSlice';
 
 import './subheader.sass';

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { show } from '../modals/basket/basketSlice';
+import { show } from '../modals/basket/BasketSlice';
 import { showModal } from '../modals/modal-window/modalSlice';
+import { Link } from 'react-router-dom';
  
 import './header.sass';
 
@@ -41,47 +42,39 @@ const Header = () => {
 		<header className="Header">
 			<div className={isOn ? 'wrapper wrapper-active': 'wrapper'}>
 				<div className="logo">
-					<a href="/Home/Index">ВЕСТА</a>
+					<a href="/">ВЕСТА</a>
 				</div>
 				<div className="menu">
 					<nav>
 						<ul className="main-ul">
 							<li>
-								<a href="#">ГЛАВНАЯ</a>
+								<Link to="/">ГЛАВНАЯ</Link>
 							</li>
 							<li className="have-navigation">
 								<p>КАТАЛОГ</p>
 								<ul className="drop-down">
 									<li>
-										<a href="#">
-											ЖЕНСКИЙ ОТДЕЛ
-										</a>
+										<Link to="/">ЖЕНСКИЙ ОТДЕЛ</Link>
 									</li>
 									<li>
-										<a href="#">
-											МУЖСКОЙ ОТДЕЛ
-										</a>
+										<Link to="/">МУЖСКОЙ ОТДЕЛ</Link>
 									</li>
 									<li>
-										<a href="#">
-											АКСЕССУАРЫ
-										</a>
+										<Link to="/">АКСЕССУАРЫ</Link>										
 									</li>
 									<li>
-										<a href="#">
-											РАСПРОДАЖА
-										</a>
+										<Link to="/">РАСПРОДАЖА</Link>										
 									</li>
 								</ul>
 							</li>
 							<li>
-								<a href="#">О НАС</a>
+								<Link to="about">О НАС</Link>																		
 							</li>
 							<li>
-								<a href="#">КОНТАКТЫ</a>
+								<Link to="contacts">КОНТАКТЫ</Link>								
 							</li>
 							<li>
-								<a href="#">FAQ</a>
+								<Link to="FAQ">FAQ</Link>								
 							</li>
 							<li className="icon">                            
 								<div>

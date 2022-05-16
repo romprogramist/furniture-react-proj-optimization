@@ -1,0 +1,48 @@
+.aboutUs
+    padding: 80px 50px
+    .wrapper
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        .title
+            width: 40%
+            p
+                margin-top: 30px
+        .img
+            width: 55%
+            position: relative
+            margin-top: 30px
+            h1
+                font-size: 38px
+                top: -55px
+                position: absolute
+            img
+                width: 100%
+                
+@media  (max-width: 1150px)
+    .aboutUs    
+        padding: 70px 15px
+        .wrapper
+            .title
+                width: 47%
+                p
+                    font-size: 15px
+                    margin-top: 10px
+            .img
+                width: 50%
+                margin-top: 10px
+                h1
+                    font-size: 30px
+@media  (max-width: 757px)
+    .aboutUs    
+        .wrapper
+            flex-direction: column
+            .title
+                order: 2
+                margin: 0 auto
+                width: 95%
+            .img
+                order: 1
+                margin: 0 auto
+                width: 95%
+            

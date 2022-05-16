@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { hide } from './basketSlice'
+import { hide } from './BasketSlice'
 import { bodyClassAddHide, bodyClassRemoveHide } from '../../header/Header';
+import BasketItem from './BasketItem';
 import './basket.sass'
 
 
@@ -18,6 +19,12 @@ const Basket = () => {
     const closeBasket = () => {
         dispatch(hide());
     }
+
+    const items = [
+        {name: 'tovar1', price: 23, imgUrl: 'https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/03/87/65/58/54/71075d640cd7.jpg'},
+        {name: 'tovar2', price: 28, imgUrl: 'https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/03/87/65/58/54/71075d640cd7.jpg'},
+        {name: 'tovar3', price: 4, imgUrl: 'https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/03/87/65/58/54/71075d640cd7.jpg'}
+    ]
     
     return (
         <div className= {`basket-window ${basketOpened ? "" : 'none'}`}>
@@ -29,49 +36,9 @@ const Basket = () => {
         </div>
         <form>
             <div className="wrapper">
-                <div className="item">
-                    <div className="delete">
-                        <div className="box"></div>
-                    </div>
-                    <img src="https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/03/87/65/58/54/71075d640cd7.jpg" alt="" title=""></img>
-                    <div className="nam-prod">
-                        <p className="name">ЗАУЖЕННЫЕ ЧИНОС</p>
-                        <p className="price">4,000.00</p>
-                        <div className="quantity-of-goods">
-                            <button>
-                                -
-                            </button>
-                            <p className="counter">
-                                0
-                            </p>
-                            <button>
-                                +
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="delete">
-                        <div className="box"></div>
-                    </div>
-                    <div className="delete"></div>
-                    <img src="https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/03/87/65/58/54/71075d640cd7.jpg" alt="" title=""></img>
-                    <div className="nam-prod">
-                        <p className="name">ЗАУЖЕННЫЕ ЧИНОС</p>
-                        <p className="price">4,000.00</p>
-                        <div className="quantity-of-goods">
-                            <button>
-                                -
-                            </button>
-                            <p className="counter">
-                                1
-                            </p>
-                            <button>
-                                +
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {items.map(i => (
+                    <BasketItem productName={i.name} price={i.price}/>
+                ))}
             </div>
             <div className="total-amount">
                 <div>
