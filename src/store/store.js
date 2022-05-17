@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import basketReducer from '../components/modals/basket/BasketSlice'
+import basketReducer from '../components/modals/basket/basketSlice'
 import modalReducer from '../components/modals/modal-window/modalSlice'
 
 

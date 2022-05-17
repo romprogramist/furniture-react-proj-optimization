@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { show } from '../modals/basket/BasketSlice';
+import { show } from '../modals/basket/basketSlice';
 import { showModal } from '../modals/modal-window/modalSlice';
 import { Link } from 'react-router-dom';
  
