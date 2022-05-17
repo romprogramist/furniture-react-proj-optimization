@@ -1,7 +1,7 @@
 import React from 'react';
 import './shadow.sass';
 import { useSelector, useDispatch } from 'react-redux'
-import { hide } from '../basket/BasketSlice'
+import { hide } from '../basket/basketSlice'
 
 
 

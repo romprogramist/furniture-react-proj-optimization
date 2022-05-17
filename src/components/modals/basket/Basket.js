@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { hide } from './BasketSlice'
+import { hide } from './basketSlice'
 import { bodyClassAddHide, bodyClassRemoveHide } from '../../header/Header';
 import BasketItem from './BasketItem';
 import './basket.sass'
