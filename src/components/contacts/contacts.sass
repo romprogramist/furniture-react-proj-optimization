@@ -1,7 +1,81 @@
 .contacts
     padding: 50px 40px
     h1
+        text-align: center
         font-size: 38px
     .wrapper
+        margin-top: 40px
         display: flex
-        justify-content: space-between
+        justify-content: space-around
+        position: relative
+        &::before
+            position: absolute
+            left: 0
+            content: ''
+            width: 50%
+            height: 1px
+            background: #ebeff2
+        .navigation
+            margin-top: 15px
+            width: 45%
+            h3
+                font-size: 28px
+            .address
+                margin-top: 15px
+                font-size: 20px
+            .workMode
+                margin-top: 15px
+                line-height: 22px
+            a
+                margin-top: 15px
+                display: block
+                font-size: 27px
+                color: #242323
+        .map
+            width: 45%
+
+@media  (max-width: 979px)
+    .contacts
+        padding: 50px 10px
+        h1
+            font-size: 30px
+        .wrapper
+            justify-content: space-between
+            .navigation
+                margin-top: 15px
+                width: 45%
+                h3
+                    font-size: 24px
+                .address
+                    font-size: 18px
+                a
+                    margin-top: 15px
+                    display: block
+                    font-size: 25px
+                    color: #242323
+@media  (max-width: 757px)
+    .contacts
+        h1
+            text-align: left
+        .wrapper
+            flex-direction: column
+            &::before
+                width: 100%
+            .navigation
+                width: 100%
+            .map
+                width: 100%
+                margin-top: 25px
+@media  (max-width: 530px)
+    .contacts
+        padding: 40px 10px
+        h1
+            font-size: 30px
+        .wrapper
+            .navigation
+                h3
+                    font-size: 20px
+                .address
+                    font-size: 16px
+                a
+                    font-size: 20px
